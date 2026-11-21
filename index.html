@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>KM DEV Cloud Terminal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">☁</span><span>KM DEV <b>CLOUD</b></span></a>
+  <span class="edition">GITHUB DEMO · HOST NOT CONNECTED</span>
+</header>
+<main class="container">
+  <section class="hero">
+    <div><p class="eyebrow">CLOUD CONTROL CENTER</p><h1>Cloud <span>Terminal.</span></h1>
+    <p class="muted">A browser terminal prototype. A real VPS can be connected later through a secured backend.</p></div>
+    <div class="hero-mark">K</div>
+  </section>
+
+  <section class="stats">
+    <article class="stat"><span>Host connection</span><strong class="warning">Not connected</strong></article>
+    <article class="stat"><span>Terminal mode</span><strong>Simulation</strong></article>
+    <article class="stat"><span>Shell prompt</span><strong>root@kmdev:~#</strong></article>
+  </section>
+
+  <section class="terminal-panel">
+    <div class="terminal-title"><div class="dots"><i></i><i></i><i></i></div><span>KM DEV CLOUD — TERMINAL</span><span class="terminal-state">DEMO</span></div>
+    <div id="terminal" class="terminal" aria-live="polite">
+      <div class="welcome">KM DEV Cloud Terminal [Demo]<br>Type <b>help</b> to see available demo commands.<br><span class="yellow">Notice:</span> This is a simulated shell. Commands do not run on GitHub or a real Linux VPS.</div>
+      <div id="output"></div>
+      <form id="command-form" class="command-line" autocomplete="off">
+        <label for="command"><span class="prompt">root@kmdev:~#</span></label>
+        <input id="command" name="command" spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="type a command..." autofocus>
+      </form>
+    </div>
+    <div class="terminal-footer"><span>● Local demo session</span><button id="clear" type="button">Clear terminal</button></div>
+  </section>
+
+  <section class="section-heading"><div><p class="eyebrow">AVAILABLE IN DEMO</p><h2>Try these commands</h2></div></section>
+  <div class="chips">
+    <button class="chip" data-cmd="help">help</button>
+    <button class="chip" data-cmd="apt update">apt update</button>
+    <button class="chip" data-cmd="apt install neofetch -y">apt install neofetch -y</button>
+    <button class="chip" data-cmd="neofetch">neofetch</button>
+    <button class="chip" data-cmd="free -h">free -h</button>
+    <button class="chip" data-cmd="df -h">df -h</button>
+    <button class="chip" data-cmd="lscpu">lscpu</button>
+    <button class="chip" data-cmd="uname -a">uname -a</button>
+  </div>
+
+  <section class="section-heading"><div><p class="eyebrow">FUTURE INTEGRATION</p><h2>VPS features</h2></div><span class="pill">When host is connected</span></section>
+  <section class="tools-grid">
+    <article class="tool"><span>⌘</span><h3>Real root terminal</h3><p>Secure WebSocket connection to a Linux host, with server-side authorization.</p><em>Future integration</em></article>
+    <article class="tool"><span>▤</span><h3>File manager</h3><p>Browse and manage files on an authorized VPS.</p><em>Future integration</em></article>
+    <article class="tool"><span>⚙</span><h3>systemd & packages</h3><p>Use the real operating system package manager and service manager.</p><em>Future integration</em></article>
+    <article class="tool"><span>◇</span><h3>Pterodactyl / Wings</h3><p>Install and manage supported hosting services on a suitable Linux VM.</p><em>Future integration</em></article>
+  </section>
+  <footer>KM DEV CLOUD · Static GitHub Pages prototype · Terminal output is simulated; no commands are executed.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
